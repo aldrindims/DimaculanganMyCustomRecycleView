@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<AndroidVersion> list;
     CustomAdapter adapter;
     //StaggeredGridLayoutManager layoutManager;
-    GridLayoutManager layoutManager;
-    //LinearLayoutManager layoutManager;
+    //GridLayoutManager layoutManager;
+    LinearLayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
         list = new ArrayList<AndroidVersion>();
 
         //layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-        layoutManager = new GridLayoutManager(this, 2);
-        //layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(GridLayoutManager.HORIZONTAL);
-        //layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        //layoutManager = new GridLayoutManager(this, 2);
+        layoutManager = new LinearLayoutManager(this);
+        //layoutManager.setOrientation(GridLayoutManager.HORIZONTAL);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         //layoutManager.setOrientation(StaggeredGridLayoutManager.HORIZONTAL);
         rvAndroidVersions.setLayoutManager(layoutManager);
         rvAndroidVersions.setHasFixedSize(true);
